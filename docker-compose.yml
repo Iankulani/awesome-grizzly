@@ -1,0 +1,60 @@
+# ============================================================
+# AWESOME-GRIZZLY-V1 - Docker Compose
+# ============================================================
+version: "3.9"
+
+services:
+  grizzly:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: awesome-grizzly-v1:1.0.0
+    container_name: awesome-grizzly-v1
+    hostname: grizzly
+    restart: unless-stopped
+    
+    # Needed for raw sockets (scapy) and some network tools
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_ADMIN
+    
+    # For full network tooling
+    network_mode: "host"  # Comment out if not needed
+    
+    ports:
+      - "5000:5000"   # Web Dashboard
+      - "8080:8080"   # Phishing server
+      - "4444:4444"   # C2 callback
+      - "9001:9001"   # Malware callback
+    
+    volumes:
+      - grizzly_data:/app/.awesome_grizzly_v1
+      - grizzly_reports:/app/awesome_grizzly_reports
+      - ./data:/app/data
+    
+    environment:
+      - TZ=UTC
+      - ENABLE_XVFB=true
+      - PYTHONUNBUFFERED=1
+      - GRIZZLY_HOME=/app
+    
+    stdin_open: true
+    tty: true
+    
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:5000/api/stats', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  grizzly_data:
+    driver: local
+  grizzly_reports:
+    driver: local
+
+networks:
+  default:
+    name: grizzly_net

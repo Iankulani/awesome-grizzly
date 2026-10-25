@@ -1,0 +1,87 @@
+# ============================================================
+# AWESOME-GRIZZLY-V1 - Core Requirements
+# ============================================================
+# Python 3.7+ required
+
+# ------------------- Core Utilities -------------------
+colorama>=0.4.6
+requests>=2.31.0
+psutil>=5.9.0
+python-dateutil>=2.8.2
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# ------------------- Cryptography -------------------
+cryptography>=41.0.0
+pyopenssl>=23.2.0
+
+# ------------------- SSH & Networking -------------------
+paramiko>=3.3.0
+scapy>=2.5.0
+dnspython>=2.4.0
+netaddr>=0.9.0
+netifaces>=0.11.0
+
+# ------------------- Web Framework -------------------
+Flask>=2.3.0
+Flask-SocketIO>=5.3.0
+Flask-CORS>=4.0.0
+Werkzeug>=2.3.0
+gevent>=23.7.0
+gevent-websocket>=0.10.1
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# ------------------- Bot Integrations -------------------
+discord.py>=2.3.0
+telethon>=1.31.0
+slack-sdk>=3.23.0
+slack-bolt>=1.18.0
+selenium>=4.13.0
+webdriver-manager>=4.0.0
+
+# ------------------- Google APIs -------------------
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-api-python-client>=2.100.0
+
+# ------------------- Data Visualization -------------------
+matplotlib>=3.7.0
+numpy>=1.24.0
+
+# ------------------- PDF & Document Generation -------------------
+reportlab>=4.0.0
+python-docx>=0.8.11
+PyPDF2>=3.0.0
+
+# ------------------- Keylogger & Input -------------------
+pynput>=1.7.6
+pyautogui>=0.9.54
+pyperclip>=1.8.2
+Pillow>=10.0.0
+
+# ------------------- WHOIS & Recon -------------------
+python-whois>=0.8.0
+shodan>=1.28.0
+
+# ------------------- QR Code & URL -------------------
+qrcode>=7.4.2
+pyshorteners>=1.0.1
+
+# ------------------- Email -------------------
+secure-smtplib>=0.1.1
+
+# ------------------- Database -------------------
+# sqlite3 is built-in
+
+# ------------------- Progress & CLI -------------------
+tqdm>=4.66.0
+tabulate>=0.9.0
+rich>=13.5.0
+click>=8.1.0
+
+# ------------------- Additional Tools -------------------
+pycryptodome>=3.19.0
+rsa>=4.9
+pyjwt>=2.8.0
