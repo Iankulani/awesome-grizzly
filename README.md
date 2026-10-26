@@ -1,4 +1,4 @@
-# awesome-grizzy-v1
+# awesome-grizzly
 
 Awesome grizzly
 
