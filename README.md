@@ -52,4 +52,4 @@ Awesome Grizzly brings multi-platform command execution to cybersecurity through
 
 # Star History
 
-
+![Star History](https://shieldcn.dev/chart/github/stars/Iankulani/awesome-grizzly.svg?theme=violet)
